@@ -1,0 +1,25 @@
+Crea una clase llamada CarritoDeCompras que represente un carrito de compras simple. 
+El carrito debe tener las siguientes características:
+
+    Debe tener una propiedad llamada items que sea un array para almacenar los productos en el carrito.
+
+    Debe tener un método llamado agregarProducto(producto) que permita agregar un producto al carrito.
+
+    Debe tener un método llamado total que calcule y devuelva el precio total de todos los productos en el carrito.
+
+    Debe tener un método llamado mostrarCarrito() que muestre en la consola la lista de productos en el carrito junto con sus precios individuales y el precio total.
+
+    Los productos deben ser objetos simples con propiedades como nombre y precio.
+
+ Ejemplo de Uso:
+
+const miCarrito = new CarritoDeCompras();
+
+miCarrito.agregarProducto({ nombre: "Camiseta", precio: 20 });
+miCarrito.agregarProducto({ nombre: "Zapatos", precio: 50 });
+
+miCarrito.mostrarCarrito();
+// Output esperado:
+// - Camiseta: $20
+// - Zapatos: $50
+// Total: $70

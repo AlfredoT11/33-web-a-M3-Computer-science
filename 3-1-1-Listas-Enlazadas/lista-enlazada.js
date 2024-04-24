@@ -68,8 +68,30 @@ class LinkedList{
     }
 
     //Recorrido de la lista
+    print(){
+        let linkedListString = "" //Cadena donde voy a concatenar los datos de mi lista
+        let current = this.head
+        while(true){
+            if(current == null){
+                break //break es una palabra reservada que utilizamos para salir de un loop
+            }
+
+            linkedListString += `${current.data} -> `
+            current = current.next
+        }
+
+        return linkedListString = linkedListString + "null"
+    }
 
     //Búsqueda de un elemento
+    searchIfExist(data){
+        let current = this.head
+        while (current !== null && current.data !== data){
+            current = current.next
+        }
+
+        return current !== null
+    }
 }
 
 
@@ -86,3 +108,7 @@ linkedlist.delete(5)
 linkedlist.delete(3)
 
 console.log(linkedlist);
+
+console.log(linkedlist.print());
+console.log(linkedlist.searchIfExist(3));
+console.log(linkedlist.searchIfExist(2));

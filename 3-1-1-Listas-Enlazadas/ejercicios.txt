@@ -1,0 +1,40 @@
+1.- Contar la cantidad de nodos: Implementa una función countNodes() que cuente y devuelva la cantidad de nodos en la lista enlazada.
+Ejemplo:
+Entrada
+let lista = new LinkedList();
+lista.insert(10);
+lista.insert(20);
+lista.insert(30);
+lista.insert(40);
+
+Salida
+console.log(lista.countNodes()); // Salida esperada: 4
+
+2.- Concatenar dos listas enlazadas: Crea un método concatenate(otherList) que tome otra lista enlazada como argumento y la agregue al final de la lista actual.
+Ejemplo:
+Entrada
+let lista1 = new LinkedList();
+lista1.insert(10);
+lista1.insert(20);
+lista1.insert(30);
+
+let lista2 = new LinkedList();
+lista2.insert(40);
+lista2.insert(50);
+
+Salida
+lista1.concatenate(lista2);
+console.log(lista1.print()); // Salida esperada: "10 -> 20 -> 30 -> 40 -> 50 -> null"
+
+
+EXTRA.- Imprimir la lista al revés: Crea un método printReverse() que imprima los elementos de la lista enlazada en orden inverso.
+Ejemplo:
+Entrada
+let lista = new LinkedList();
+lista.insert(10);
+lista.insert(20);
+lista.insert(30);
+lista.insert(40);
+
+Salida
+Lista al revés: 40 -> 30 -> 20 -> 10 -> nullv

@@ -1,6 +1,12 @@
 //Arreglo de prueba
 let arreglo = [0,4,7,10,14,23,45,47,53]
 
+let personas = [
+    {id: 0, nombre: "Pepe", edad: 23}, 
+    {id: 4, nombre: "Laura", edad: 23},
+    {id: 7, nombre: "Felipe", edad: 23},
+    {id: 10, nombre: "Jose", edad: 23},
+]
 //Búsqueda binaria
 //Complejidad : O(log(n))
 
@@ -30,3 +36,31 @@ function busquedaBinaria(arreglo, elemento) {
 }
 
 console.log(busquedaBinaria(arreglo, 47));//Salida esperada: 7
+
+
+
+function busquedaBinariaPersonas(arreglo, elemento) {
+    let inicio = 0
+    let fin = arreglo.length - 1
+    //Itero mi búsqueda mientras el inicio sea menor o igual al fin del arreglo
+    while (inicio <= fin) {
+        //Paso 1: Definir la mitad de mi arreglo
+        let medio = Math.floor((inicio + fin) / 2)
+
+        //Escenario 1: El elemento que estoy buscando se encuentra a la mitad
+        if(arreglo[medio].id===elemento){
+            //Devuelvo el punto medio
+            return medio
+        //Escenario 2: El elemento que estoy buscando es MENOR al punto medio
+        }else if(elemento < arreglo[medio].id){
+           fin = medio - 1
+        }else{
+        //Escenario 3: El elemento que estoy buscando es MAYOR al punto medio
+            inicio = medio + 1
+        }
+    }
+
+    return "No se encontró el elemento"
+}
+
+console.log(busquedaBinariaPersonas(personas, 7));
